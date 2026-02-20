@@ -1,10 +1,7 @@
 local data = {}
 
-if arg[1] then
-    data.file = assert(io.open(arg[1],"r"), "No " .. arg[1] .. " file found")
-else
-    data.file = assert(io.open("data.txt", "r"), "No data.txt file found")
-end
+if not arg[1] then error("You must pass the name of the file you want to parse as an argument") end
+data.file = assert(io.open(arg[1],"r"), "No file called".. arg[1] "found")
 
 data.lines = 0
 for _ in data.file:lines() do
