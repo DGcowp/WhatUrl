@@ -13,7 +13,7 @@ I've only uploaded it here because I want to learn how to use github and what be
         1/12/25, 12:03 - foo: Check out this cool website https://example.com
         2/12/25, 17:50 - bar: Cool website!!
         2/12/25, 17:55 - bar: Although, https://example.org, is cooler
-2. In the terminal, execute `lua WhatUrl.lua doo/bar/exported_chat_file_name.txt` 
+2. In the terminal, execute `lua WhatUrl.lua foo/bar/exported_chat_file_name.txt` 
    
 4. Now you have an `output.csv` whose contents are:
     ```
