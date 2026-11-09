@@ -13,7 +13,8 @@ local matches = {}
 for line in data.file:lines() do
     local date, time, user, message = line:match("^(%d+/%d+/%d+), (%d+:%d+) %- ([^:]+): (.+)$")
     if message then
-        local url = line:match("https?://(([%w_.~!*:@&+$/?%%#-]-)(%w[-.%w]*%.)(%w%w%w?%w?)(:?)(%d*)(/?)([%w_.~!*:@&+$/?%%#=-]*))") --pattern taken from https://forums.indigorose.com/forum/autoplay-media-studio-8-5/autoplay-media-studio-8-discussion/299325-pattern-matching-for-valid-urls/page2
+        --pattern taken from https://forums.indigorose.com/forum/autoplay-media-studio-8-5/autoplay-media-studio-8-discussion/299325-pattern-matching-for-valid-urls/page2
+        local url = line:match("https?://(([%w_.~!*:@&+$/?%%#-]-)(%w[-.%w]*%.)(%w%w%w?%w?)(:?)(%d*)(/?)([%w_.~!*:@&+$/?%%#=-]*))")
         if url then
             table.insert(matches, date .. "," .. time .. "," .. user .. "," .. url)
         end
